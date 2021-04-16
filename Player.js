@@ -1,5 +1,4 @@
 function Player() {
-
     this.x = width / 2 + 41;
     this.y = height / 2 + 100;
   
@@ -62,7 +61,6 @@ function Player() {
   
     //make the player move when they press the arrow keys
     this.move = function() {
-  
       if (keyIsDown(LEFT_ARROW)) {
         this.x = this.x + this.turnSpeed * -1;
       }
@@ -78,7 +76,6 @@ function Player() {
       if (keyIsDown(DOWN_ARROW)) {
         this.y = this.y + this.acceleration;
       }
-  
     }
   
     //make the player unable to go off the road
@@ -96,5 +93,4 @@ function Player() {
         this.x = 134;
       }
     }
-  
   }

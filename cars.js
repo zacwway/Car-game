@@ -29,7 +29,6 @@ function CarL() {
   this.move = function () {
     this.y += this.speed;
   }
-
 }
 
 function CarR() {
@@ -64,6 +63,4 @@ function CarR() {
   this.move = function () {
     this.y += this.speed;
   }
-
-
 }

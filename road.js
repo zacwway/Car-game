@@ -1,5 +1,4 @@
 function Road() {
-
   this.x = width / 2;
   this.y = height / 2
 
@@ -26,8 +25,4 @@ function Road() {
     //draw the wall on the right
     rect(this.x + 90, 0, 10, height);
   }
-
-
-
-
 }

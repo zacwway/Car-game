@@ -5,7 +5,6 @@ var road;
 var tree1;
 var tree2;
 
-
 function setup() {
   createCanvas(400, 525);
   player = new Player();
@@ -32,7 +31,6 @@ function draw() {
 
   //Start the game when the player pressed one of the arrow keys
   if (keyCode === UP_ARROW || keyCode === DOWN_ARROW || keyCode === LEFT_ARROW || keyCode === RIGHT_ARROW) {
-
     if (tree1.y1 > edge) {
       tree1 = new Tree1();
     }

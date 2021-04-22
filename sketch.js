@@ -6,7 +6,7 @@ var tree1;
 var tree2;
 
 function setup() {
-  createCanvas(400, 525);
+  createCanvas(windowWidth, windowHeight);
   player = new Player();
   carL = new CarL();
   carR = new CarR();
@@ -21,13 +21,14 @@ function draw() {
   var edge = height + 35;
 
   //tell the player how to play the game
+  textAlign(CENTER);
   noStroke();
   fill(255);
   textSize(25);
-  text('Try not to hit any of the other cars.', 5, 250);
-  text('Use the arrow keys to move.', 35, 300);
+  text('Try not to hit any of the other cars.', width / 2, height / 2);
+  text('Use the arrow keys to move.', width / 2, height / 2 - 30);
   textSize(15);
-  text('Press one of the arrow keys to start.', 75, 350);
+  text('Press one of the arrow keys to start.', width / 2, height / 2 - 60);
 
   //Start the game when the player pressed one of the arrow keys
   if (keyCode === UP_ARROW || keyCode === DOWN_ARROW || keyCode === LEFT_ARROW || keyCode === RIGHT_ARROW) {
@@ -79,7 +80,9 @@ function draw() {
       rect(0, 0, width, height);
       fill(255);
       textSize(75);
-      text('Game Over', 5, 250);
+      textAlign(CENTER);
+      text('Game Over', width / 2, height / 2);
+      text('Game Over', width /2, height /2 + 100)
     }
 
     //end the game if the player hits one of the cars on the right
@@ -96,7 +99,9 @@ function draw() {
       rect(0, 0, width, height);
       fill(255);
       textSize(75);
-      text('Game Over', 5, 250);
+      textAlign(CENTER);
+      text('Game Over', width / 2, height / 2);
+      text('Refresh the screen to try again', width / 2, height /  2 + 100);
     }
   }
 }
